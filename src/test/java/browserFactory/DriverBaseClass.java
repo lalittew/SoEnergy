@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverBaseClass {
     public static WebDriver driver;
 
-    public static String homePageUrl = "https://fe-automation-tool.s3.eu-west-1.amazonaws.com/index.html";
+    public static String homePageUrl = "http://automationpractice.com/index.php";
 
     public static WebDriver startBrowser()
     {
