@@ -14,9 +14,12 @@ import java.io.IOException;
 
 public class Hooks {
 
+    public static Scenario scenario;
+
     @Before
-    public void beforeTest() {
+    public void beforeTest(Scenario scenario) {
         DriverBaseClass.startTest();
+        Hooks.scenario = scenario;
     }
 
     @After

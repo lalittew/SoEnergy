@@ -3,6 +3,8 @@ This project is built using Selenium-cucumber framework and follows Page Factory
 The language used is Java
 I have build this project using Intellij as IDE and operating system as Mac
 All the setup dependency are defined in Pom.xml file which is used from my own existing github projects for Selenium.
+I have chosen chrome to run all my test and not created any choice for user to select which browser to run test, since it was not
+mentioned in task list to use any specific browser. But it will be easy to implement that feature.
 
 
 Git hub location:

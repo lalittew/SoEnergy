@@ -4,6 +4,7 @@ import browserFactory.DriverBaseClass;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import stepDefinitions.Hooks;
 
 public class AddressConfirmPageFunctions extends DriverBaseClass {
 
@@ -41,11 +42,19 @@ public class AddressConfirmPageFunctions extends DriverBaseClass {
 //########################## All the functions related to this page ##############################################################
     public void printProductName(){
         String productName = productNamePaymentPage.getText();
+        // Print ProductName in IDE console
         System.out.println("The name of product is: " + productName);
+
+        //Print ProductName in cucumber report
+        Hooks.scenario.write("Product Name is: " + productName);
     }
 
     public void printProductTotalPrice(){
         String productPriceTotal = productTotalPrice.getText();
+        // Print ProductPrice in IDE console
         System.out.println("The total price of product is: " + productPriceTotal);
+
+        //Print ProductPrice in cucumber report
+        Hooks.scenario.write("Product Name is: " + productPriceTotal);
     }
 }
