@@ -1,68 +1,43 @@
-Explaining highlights of project:
-
-Framework and language used:
-This project is made by using Selenium Cucumber Framework with Page Object Model using Java as language
-This project is Maven project and all maven selenium,cucumber,java,junit and other dependencies can be found in "pom.xml" file
-I build this project using Intellij IDE and using mac operating system
-
-
-Feature File:
-1) This path for feature files is : /Xdesign/Features
-2) Feature files contains different scenarios
-3) Scenarios which are given in taken home task pdf file are all under XdesignHomePage.feature file
-
-Note: Since there were not clear instructions whether I am allowed to change the gherkin format given I have used same statements as mentioned in
-pdf file
-
-Note: For the valid login credentials I needed to register into website which i was not compeletely sure how I can do, hence I have not written
-exclusive test for the same but can be easily written using the test "Verify that user is not able to login into Hudl on giving wrong email or password"
-and replacing the last step with correct page expection and also by replacing invalid credentials with valid credential
+Project overview:
+This project is built using Selenium-cucumber framework and follows Page Factory Model to define the project structure
+The language used is Java
+I have build this project using Intellij as IDE and operating system as Mac
+All the setup dependency are defined in Pom.xml file which is used from my own existing github projects for Selenium.
 
 
-Step Definitions:
-1) The path for Step definitions package files is: /Xdesign/src/test/java/stepDefinitions
-2) The step definitions for the respective feature files can be found under this package
-3) Under the steps definition file which part is doing what is briefly explained using comments
-
-Locators and Functions:
-1) This project contains 2 function files which can be found under package path: /Xdesign/src/test/java/functionFile
-2) All the different pages contains different functions files
-3) The locators find to use the element can be found under respective related function file name
-4) Different type of locators have been used to explain variety and best way to find the elements on page
-5) Functions files also contains Strings related to respective page at top level and then all locators below to it
-6) All the common functions which can be used across any pages are defined in GeneralFunctions class
+Git hub location:
+1) This project can also be cloned from git hub link: https://github.com/lalittew/SoEnergy.git
 
 
-How to run the tests:
-1) There are two ways tests can be run:
-        a) Go to TestRunner.java class and run TestRunner function by clicking green button next to it
-        b) Create a Run configuration. This can be done by adding a Junit configuration using + button under edit configuration
-        and selecting TestRunner class
-
-Note:
-TestRunner class can be found under path: /Xdesign/src/main/java/testRunner/TestRunner.java
-1) Make sure all the test having annotation same as defined in Test Runner class, for this project
-2) I have used "@test" as an annotation
-3) If the annotations above the test are not matching the one defined in TestRunner class it will skip those tests
+Build and execution details:
+1) There are two ways to run this project:
+    a) Right click on TestRunner file and select 'Run TestRunner' option or open TestRunner file and click on Run button next to TestRunner
+        class
+    b) Another way to run this project is creating a Run configuration, this can be simply done by going into RunConfiguration and creating
+        new Junit configuration, and selecting TestRunner class
 
 
-ScreenShot for failing test:
-1) Tests which are failed will generate screen shots and that can be found under path with the respective test name and step: /HudlLoginProject/ScreenShots
+Location of important files:
+2) Runner file: The TestRunner file can be find in path : SoEnergy/src/main/java/testRunner/TestRunner.java
+3) Feature file can be found in path: SoEnergy/Features/SoEnergyTest.feature
+4) Step definition files can be found in path: SoEnergy/src/test/java/stepDefinitions
+5) DriverBase class where driver details, home page url is defined can be found in path: SoEnergy/src/test/java/browserFactory/DriverBaseClass.java
+6) Webelements and strings of respective pages can be found in path: SoEnergy/src/test/java/functionFile
 
 
-HTML Reports
-1) HTML report will get generated at the end of run and can be found at path: /HudlLoginProject/target/cucumber-reports/index.html
-2) Just drag and drop this "index.html" report in browser to view report
+Location of reports and screen shots:
+7) Test run report can be found at path: SoEnergy/target/cucumber-reports/index.html
+To view the report just drag and drop in browser
+Note: The current report present is from the last run given by me.
 
-General Notes:
-1) Since for the Scenario 3 there was little ambiguity I have used serial number as reference to find out if the list is sorted in descending order or not
-Ideally this is the first question I will be asking with Product, that what is expected result should be so I can write test based on the answer.
-2) There are some extra Scenarios I have added to test because I was not sure what expectations are set from me.
-3) I have not changed any statements from the take home task for the steps because I was not sure if I am supposed to do or not
-So I have tried automated the steps in best possible way to accomodate testing, but if I was sure then can make the scenario steps more clear
-for better understanding
-4) Lot of steps could have been re=used but again I was not sure if I am, allowed to modify the scenario steps, hence there might be some amount of
-repeatability can be seen in steps
+8) Screenshots for the failure step for the test(If any) can be found at path: SoEnergy/ScreenShots
+
+
+CICD file:
+9) Location for config.yaml file for the "CircleCI" can be found at path: SoEnergy/.circleci/config.yml
+
+
+
 
 
 
